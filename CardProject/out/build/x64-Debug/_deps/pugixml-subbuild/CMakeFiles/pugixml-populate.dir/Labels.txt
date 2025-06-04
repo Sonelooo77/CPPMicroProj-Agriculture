@@ -1,0 +1,14 @@
+# Target labels
+ pugixml-populate
+# Source files and their labels
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/CMakeFiles/pugixml-populate
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/CMakeFiles/pugixml-populate.rule
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/CMakeFiles/pugixml-populate-complete.rule
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-build.rule
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-configure.rule
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-download.rule
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-install.rule
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-mkdir.rule
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-patch.rule
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-test.rule
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-update.rule

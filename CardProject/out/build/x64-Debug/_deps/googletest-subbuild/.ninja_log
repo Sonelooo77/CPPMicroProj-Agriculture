@@ -1,0 +1,21 @@
+# ninja log v6
+1804	1872	7707418159377169	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	3742bdfb50839558
+1738	1804	7707418158690390	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	7940243ecb87397b
+7	85	7707418141505129	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	c24ce54915f1eae0
+1606	1672	7707418157381434	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	2698d907727199d4
+7	85	7707418141505129	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	c24ce54915f1eae0
+1672	1738	7707418158041567	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	9315e3af9be45482
+1672	1738	7707418158041567	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	9315e3af9be45482
+87	1605	7707418156701805	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	d443d849bd84f86c
+1606	1672	7707418157381434	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	2698d907727199d4
+87	1605	7707418156701805	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	d443d849bd84f86c
+1738	1804	7707418158690390	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	7940243ecb87397b
+2003	2095	7707418161545869	CMakeFiles/googletest-populate-complete	428a6ed712d3a3b8
+1804	1872	7707418159377169	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	3742bdfb50839558
+1872	1938	7707418159995748	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	f91df199076ed77b
+1872	1938	7707418159995748	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	f91df199076ed77b
+1938	2003	7707418160681748	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	a09304ae131e52ca
+1938	2003	7707418160681748	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	a09304ae131e52ca
+2003	2095	7707418161545869	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	428a6ed712d3a3b8
+2003	2095	7707418161545869	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	428a6ed712d3a3b8
+2003	2095	7707418161545869	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	428a6ed712d3a3b8

@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "_deps\\pugixml-build\\CMakeFiles\\pugixml-static.dir\\src\\pugixml.cpp.obj",
+            "outputs": [
+                "C:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\out\\build\\x64-Debug\\vc140.pdb",
+                "_deps\\pugixml-build\\CMakeFiles\\pugixml-static.dir\\src\\pugixml.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

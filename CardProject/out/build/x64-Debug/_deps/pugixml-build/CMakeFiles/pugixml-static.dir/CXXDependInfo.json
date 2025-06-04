@@ -1,0 +1,41 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-build",
+	"dir-cur-src" : "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-src",
+	"dir-top-bld" : "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug",
+	"dir-top-src" : "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject",
+	"exports" : 
+	[
+		{
+			"cxx-module-info-dir" : "",
+			"destination" : "lib/cmake/pugixml",
+			"export-name" : "static",
+			"export-prefix" : "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-build/CMakeFiles/Export/be764272e56105fc8ff11fec8314e604",
+			"filesystem-export-name" : "static",
+			"install" : true,
+			"namespace" : "pugixml::"
+		},
+		{
+			"cxx-module-info-dir" : "",
+			"destination" : "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-build",
+			"export-name" : "static",
+			"export-prefix" : "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-build",
+			"filesystem-export-name" : "static",
+			"install" : false,
+			"namespace" : "pugixml::"
+		}
+	],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"_deps\\pugixml-src\\src"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-build/CMakeFiles/pugixml-static.dir"
+}

@@ -1,0 +1,21 @@
+# ninja log v6
+3057	3123	7707417948351248	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	805b4f33f5af74a
+6	78	7707417917874907	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	d21c0064e54154dc
+6	78	7707417917874907	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	d21c0064e54154dc
+79	2583	7707417942795278	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	c20fe7e44604bc8d
+2587	2780	7707417944827112	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	b5c61940cadaea91
+79	2583	7707417942795278	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	c20fe7e44604bc8d
+2587	2780	7707417944827112	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	b5c61940cadaea91
+2781	2856	7707417945629610	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	83a062e381289acc
+2781	2856	7707417945629610	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	83a062e381289acc
+2857	2925	7707417946378577	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	7925bcd4c1a93745
+3123	3213	7707417949248175	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	95a9014671de9329
+2857	2925	7707417946378577	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	7925bcd4c1a93745
+2925	2991	7707417947035110	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	8bd008c088323cb2
+2925	2991	7707417947035110	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	8bd008c088323cb2
+2992	3057	7707417947702359	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	de94ba01220208fa
+2992	3057	7707417947702359	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	de94ba01220208fa
+3057	3123	7707417948351248	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	805b4f33f5af74a
+3123	3213	7707417949248175	CMakeFiles/sfml-populate-complete	95a9014671de9329
+3123	3213	7707417949248175	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	95a9014671de9329
+3123	3213	7707417949248175	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	95a9014671de9329

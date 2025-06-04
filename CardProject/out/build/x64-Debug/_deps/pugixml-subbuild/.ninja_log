@@ -1,0 +1,21 @@
+# ninja log v6
+1643	1732	7707418136428190	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-done	8c4d5d8a064bff0
+1378	1443	7707418133536119	pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-configure	516f5eb1c0375036
+6	80	7707418119896430	pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-mkdir	59cd18770259d4b4
+1312	1378	7707418132881703	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-patch	a2357d5ed1ebf1d1
+6	80	7707418119896430	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-mkdir	59cd18770259d4b4
+81	1247	7707418131552367	pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-download	4d26cc9dc5bcaf8f
+81	1247	7707418131552367	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-download	4d26cc9dc5bcaf8f
+1247	1312	7707418132209034	pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-update	30b443e5c526720f
+1247	1312	7707418132209034	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-update	30b443e5c526720f
+1312	1378	7707418132881703	pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-patch	a2357d5ed1ebf1d1
+1378	1443	7707418133536119	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-configure	516f5eb1c0375036
+1444	1508	7707418134184386	pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-build	4007ba8983075b05
+1444	1508	7707418134184386	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-build	4007ba8983075b05
+1509	1575	7707418134848870	pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-install	d0ae97571a357396
+1509	1575	7707418134848870	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-install	d0ae97571a357396
+1575	1642	7707418135537012	pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-test	6e68668a1eb9b4b9
+1575	1642	7707418135537012	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-test	6e68668a1eb9b4b9
+1643	1732	7707418136428190	CMakeFiles/pugixml-populate-complete	8c4d5d8a064bff0
+1643	1732	7707418136428190	pugixml-populate-prefix/src/pugixml-populate-stamp/pugixml-populate-done	8c4d5d8a064bff0
+1643	1732	7707418136428190	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/pugixml-subbuild/CMakeFiles/pugixml-populate-complete	8c4d5d8a064bff0

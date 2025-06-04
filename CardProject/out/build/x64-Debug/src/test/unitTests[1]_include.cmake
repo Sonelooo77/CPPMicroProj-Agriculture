@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/unitTests[1]_tests.cmake")
+  include("C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/unitTests[1]_tests.cmake")
+else()
+  add_test(unitTests_NOT_BUILT unitTests_NOT_BUILT)
+endif()

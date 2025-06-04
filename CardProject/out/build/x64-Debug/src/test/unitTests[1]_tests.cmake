@@ -2,4 +2,6 @@ add_test([=[TestDice.Roll2D6]=]  C:/Users/sonel/Documents/CPP/MicroProjet/CardPr
 set_tests_properties([=[TestDice.Roll2D6]=]  PROPERTIES WORKING_DIRECTORY C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
 add_test([=[TestDice.Roll10D20]=]  C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/unitTests.exe [==[--gtest_filter=TestDice.Roll10D20]==] --gtest_also_run_disabled_tests)
 set_tests_properties([=[TestDice.Roll10D20]=]  PROPERTIES WORKING_DIRECTORY C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  unitTests_TESTS TestDice.Roll2D6 TestDice.Roll10D20)
+add_test([=[TestDice.PlusOperator]=]  C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/unitTests.exe [==[--gtest_filter=TestDice.PlusOperator]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[TestDice.PlusOperator]=]  PROPERTIES WORKING_DIRECTORY C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  unitTests_TESTS TestDice.Roll2D6 TestDice.Roll10D20 TestDice.PlusOperator)

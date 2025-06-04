@@ -3,9 +3,9 @@ using namespace std;
 
 int main() { 
   int ret;
-  Dice die(6);
+  Dice die;
   for (int i = 0; i < 3; i++) {
-    ret = addDiceRet(die.roll(10));
+    ret = sumDiceRet(die.roll(10));
     cout << "Sum : " << ret << endl;
   }
   

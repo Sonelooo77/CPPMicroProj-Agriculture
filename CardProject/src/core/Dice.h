@@ -4,11 +4,13 @@
 
 class Dice {
  private:
-	 int maxNb;
-
+	 int min = 1; 
+	 int max = 6;
  public:
-	 Dice(int nb);
+     Dice() = default;  
+	 Dice(int min, int max);
 	 std::vector<int> roll(int diceNb);
 };
 
-int addDiceRet(std::vector<int>);
+std::vector<int> operator+(const std::vector<int>& a, const std::vector<int>& b);
+int sumDiceRet(std::vector<int>);

@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "Dice.h"
+#include "ResourceCard.h"
 
 TEST(TestDice, Roll2D6) {
   Dice d6;
@@ -18,9 +19,9 @@ TEST(TestDice, Roll10D20) {
 TEST(TestDice, PlusOperator) { 
 	Dice d6;
 	Dice d10(1,10);
-    std::vector<int> result;
-    const std::vector<int>& d6roll = d6.roll(2);
-    const std::vector<int>& d10roll = d10.roll(1);
+    diceRet result;
+    const diceRet& d6roll = d6.roll(2);
+    const diceRet& d10roll = d10.roll(1);
     result = d6roll + d10roll;
     int sum = sumDiceRet(result);
     int sumd6 = sumDiceRet(d6roll);

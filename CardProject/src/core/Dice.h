@@ -1,6 +1,11 @@
+#pragma once
 #include<random>
 #include<vector>
 #include<iostream>
+#include<map>
+
+using diceTypes = std::map<std::pair<int, int>, int>;  // {{NumMin, NumMax}, nombreDé}
+using diceRet = std::vector<int>;
 
 class Dice {
  private:
@@ -9,8 +14,8 @@ class Dice {
  public:
      Dice() = default;  
 	 Dice(int min, int max);
-	 std::vector<int> roll(int diceNb);
+     diceRet roll(int diceNb);
 };
 
-std::vector<int> operator+(const std::vector<int>& a, const std::vector<int>& b);
-int sumDiceRet(std::vector<int>);
+diceRet operator+(const diceRet& a, const diceRet& b);
+int sumDiceRet(diceRet);

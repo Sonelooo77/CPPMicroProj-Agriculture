@@ -2050,6 +2050,15 @@ build src\core\CMakeFiles\lib_core.dir\Dice.cpp.obj: CXX_COMPILER__lib_core_unsc
   TARGET_COMPILE_PDB = src\core\CMakeFiles\lib_core.dir\lib_core.pdb
   TARGET_PDB = src\core\lib_core.pdb
 
+build src\core\CMakeFiles\lib_core.dir\ResourceCard.cpp.obj: CXX_COMPILER__lib_core_unscanned_Debug C$:\Users\sonel\Documents\CPP\MicroProjet\CardProject\src\core\ResourceCard.cpp || cmake_object_order_depends_target_lib_core
+  DEFINES = -DSFML_STATIC
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
+  INCLUDES = -IC:\Users\sonel\Documents\CPP\MicroProjet\CardProject\src\core\. -IC:\Users\sonel\Documents\CPP\MicroProjet\CardProject\out\build\x64-Debug\_deps\pugixml-src\src -IC:\Users\sonel\Documents\CPP\MicroProjet\CardProject\out\build\x64-Debug\_deps\sfml-src\include
+  OBJECT_DIR = src\core\CMakeFiles\lib_core.dir
+  OBJECT_FILE_DIR = src\core\CMakeFiles\lib_core.dir
+  TARGET_COMPILE_PDB = src\core\CMakeFiles\lib_core.dir\lib_core.pdb
+  TARGET_PDB = src\core\lib_core.pdb
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target lib_core
@@ -2058,7 +2067,7 @@ build src\core\CMakeFiles\lib_core.dir\Dice.cpp.obj: CXX_COMPILER__lib_core_unsc
 #############################################
 # Link the static library src\core\lib_core.lib
 
-build src\core\lib_core.lib: CXX_STATIC_LIBRARY_LINKER__lib_core_Debug src\core\CMakeFiles\lib_core.dir\Dice.cpp.obj || _deps\pugixml-build\pugixml.lib _deps\sfml-build\lib\freetyped.lib _deps\sfml-build\lib\sfml-graphics-s-d.lib _deps\sfml-build\lib\sfml-system-s-d.lib _deps\sfml-build\lib\sfml-window-s-d.lib
+build src\core\lib_core.lib: CXX_STATIC_LIBRARY_LINKER__lib_core_Debug src\core\CMakeFiles\lib_core.dir\Dice.cpp.obj src\core\CMakeFiles\lib_core.dir\ResourceCard.cpp.obj || _deps\pugixml-build\pugixml.lib _deps\sfml-build\lib\freetyped.lib _deps\sfml-build\lib\sfml-graphics-s-d.lib _deps\sfml-build\lib\sfml-system-s-d.lib _deps\sfml-build\lib\sfml-window-s-d.lib
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = src\core\CMakeFiles\lib_core.dir

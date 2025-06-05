@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "Dice.h"
 #include "ResourceCard.h"
+#include "CardFactory.h"
 
 TEST(TestDice, Roll2D6) {
   Dice d6;
@@ -16,7 +17,7 @@ TEST(TestDice, Roll10D20) {
   EXPECT_LE(result, 200);
 }
 
-TEST(TestDice, PlusOperator) { 
+TEST(TestDice,  ConcatenationOperator) { 
 	Dice d6;
 	Dice d10(1,10);
     diceRet result;
@@ -28,5 +29,16 @@ TEST(TestDice, PlusOperator) {
     int sumd10 = sumDiceRet(d10roll);
     EXPECT_EQ(sum, sumd6 + sumd10);
     EXPECT_EQ(result.size(), 3);
+}
+
+TEST(TestCardFactory, MultipleDifferentDices) { 
+    CardFactory factory("res/cardsheet.xml");
+    auto carroteCard = factory.createCard("Carrote");
+    auto bleCard = factory.createCard("Ble");
+    EXPECT_EQ(carroteCard->getName(), "Carrote");
+    EXPECT_EQ(carroteCard->getCost(), 2);
+    EXPECT_EQ(bleCard->getName(), "Ble");
+    EXPECT_EQ(bleCard->getCost(), 2);
+
 }
 

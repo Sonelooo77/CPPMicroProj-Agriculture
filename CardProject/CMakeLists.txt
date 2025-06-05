@@ -20,6 +20,7 @@ FetchContent_MakeAvailable(sfml)
 
 set(CMAKE_CXX_STANDARD 23)
 
+
 FetchContent_Declare( pugixml
   URL https://github.com/zeux/pugixml/archive/refs/tags/v1.15.tar.gz
 )

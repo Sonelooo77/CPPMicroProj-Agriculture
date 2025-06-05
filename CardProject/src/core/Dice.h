@@ -4,7 +4,6 @@
 #include<iostream>
 #include<map>
 
-using diceTypes = std::map<std::pair<int, int>, int>;  // {{NumMin, NumMax}, nombreDé}
 using diceRet = std::vector<int>;
 
 class Dice {

@@ -2,12 +2,14 @@
 #include <string>
 #include <sstream>
 
-    class Card {
+
+class Card {
 	private:
 		std::string name;
 		int cost;
 
     public:
+        int getCost() const { return cost; }
         std::string getName() const { return name; }
         Card(std::string name, int cost) : name(name), cost(cost) {}
 		virtual void play() = 0;

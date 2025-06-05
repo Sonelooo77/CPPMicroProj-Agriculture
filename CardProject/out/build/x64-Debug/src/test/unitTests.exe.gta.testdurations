@@ -5,5 +5,7 @@
     <TestDuration Test="TestDice.Roll2D6" Duration="1" />
     <TestDuration Test="TestDice.Roll10D20" Duration="1" />
     <TestDuration Test="TestDice.PlusOperator" Duration="1" />
+    <TestDuration Test="TestDice.ConcatenationOperator" Duration="1" />
+    <TestDuration Test="TestCardFactory.MultipleDifferentDices" Duration="1" />
   </TestDurations>
 </GtaTestDurations>

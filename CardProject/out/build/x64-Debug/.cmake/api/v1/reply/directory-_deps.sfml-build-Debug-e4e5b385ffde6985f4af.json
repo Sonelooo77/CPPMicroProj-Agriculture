@@ -154,7 +154,7 @@
 			[
 				{
 					"id" : "sfml-system::@8cb1db2982443611e568",
-					"index" : 11
+					"index" : 12
 				}
 			],
 			"paths" : 
@@ -172,7 +172,7 @@
 			[
 				{
 					"id" : "sfml-main::@81ec5539f1398dd625f6",
-					"index" : 10
+					"index" : 11
 				}
 			],
 			"paths" : 
@@ -190,7 +190,7 @@
 			[
 				{
 					"id" : "sfml-window::@5730451e331e3690ae65",
-					"index" : 12
+					"index" : 13
 				}
 			],
 			"paths" : 
@@ -208,7 +208,7 @@
 			[
 				{
 					"id" : "sfml-graphics::@98af38147d5fa7e70f61",
-					"index" : 9
+					"index" : 10
 				}
 			],
 			"paths" : 

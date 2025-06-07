@@ -86,7 +86,7 @@ C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/cor
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/core/CMakeFiles/install.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/core/CMakeFiles/install/local.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/main/CMakeFiles/main.dir
-C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/main/CMakeFiles/copy-res.dir
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/main/CMakeFiles/copy-resources.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/main/CMakeFiles/package.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/main/CMakeFiles/package_source.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/main/CMakeFiles/test.dir
@@ -124,6 +124,7 @@ C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/g
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-build/googletest/CMakeFiles/install.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/_deps/googletest-build/googletest/CMakeFiles/install/local.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/CMakeFiles/unitTests.dir
+C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/CMakeFiles/copy-resources-for-test.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/CMakeFiles/package.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/CMakeFiles/package_source.dir
 C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/CMakeFiles/test.dir

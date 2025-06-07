@@ -15,4 +15,5 @@ void ResourceCard::play() {
   int total = sumDiceRet(result);
   oss << "| Total : " << total << std::endl;
   std::cout << oss.str();
+  setLastScore(total);
 }

@@ -18,12 +18,12 @@ class CardFactory {
  private:
   std::vector<CardData> cardDefinitions;
   std::map<std::string, CardData> cardByName;
-
   void loadXMLfile(const std::string& filename);
   CardData loadResourceCardData(const pugi::xml_node& cardNode);
 
   public:
+  std::vector<std::string> getAvailableCards();
   CardFactory(const std::string& cardsFile);
-
+  void dump();
   std::unique_ptr<Card> createCard(const std::string& cardName);
 };

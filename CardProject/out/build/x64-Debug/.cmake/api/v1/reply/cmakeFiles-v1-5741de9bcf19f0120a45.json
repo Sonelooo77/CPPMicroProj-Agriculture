@@ -1,4 +1,17 @@
 {
+	"globsDependent" : 
+	[
+		{
+			"expression" : "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/resources/*.*",
+			"listDirectories" : true,
+			"paths" : 
+			[
+				"C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/resources/cardsdefinition.xml",
+				"C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/resources/cardstest.xml",
+				"C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/resources/levelstest.xml"
+			]
+		}
+	],
 	"inputs" : 
 	[
 		{

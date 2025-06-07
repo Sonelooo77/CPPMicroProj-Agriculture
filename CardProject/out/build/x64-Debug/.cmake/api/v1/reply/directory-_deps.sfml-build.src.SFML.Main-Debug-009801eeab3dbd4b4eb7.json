@@ -41,7 +41,7 @@
 				"_deps/sfml-build/lib/sfml-main-d.lib"
 			],
 			"targetId" : "sfml-main::@81ec5539f1398dd625f6",
-			"targetIndex" : 10,
+			"targetIndex" : 11,
 			"type" : "target"
 		}
 	],

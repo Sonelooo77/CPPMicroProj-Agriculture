@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<levels>
+	<level id="1" name="Easy" maxCost="15" targetScore="20"/>
+	<level id="2" name="Medium" maxCost="10" targetScore="35"/>
+	<level id="3" name="Hard" maxCost="7" targetScore="40"/>
+</levels>

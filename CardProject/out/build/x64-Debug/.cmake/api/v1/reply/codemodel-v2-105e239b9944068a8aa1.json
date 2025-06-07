@@ -31,7 +31,7 @@
 						2
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build-Debug-50665b583edfbb81ffd3.json",
+					"jsonFile" : "directory-_deps.sfml-build-Debug-e4e5b385ffde6985f4af.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -62,7 +62,7 @@
 				{
 					"build" : "_deps/sfml-build/src/SFML/System",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.System-Debug-8dd5192b70e858bd38d1.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.System-Debug-4a5cdf30be5066e8aeee.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -72,13 +72,13 @@
 					"source" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System",
 					"targetIndexes" : 
 					[
-						11
+						12
 					]
 				},
 				{
 					"build" : "_deps/sfml-build/src/SFML/Main",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Main-Debug-d652d55379ea293bf831.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Main-Debug-009801eeab3dbd4b4eb7.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -88,13 +88,13 @@
 					"source" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Main",
 					"targetIndexes" : 
 					[
-						10
+						11
 					]
 				},
 				{
 					"build" : "_deps/sfml-build/src/SFML/Window",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Window-Debug-59bd6f27aa7fb01fb3aa.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Window-Debug-98ccef742ed3fcb46d77.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -104,7 +104,7 @@
 					"source" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Window",
 					"targetIndexes" : 
 					[
-						12
+						13
 					]
 				},
 				{
@@ -114,7 +114,7 @@
 						7
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Graphics-Debug-c64474e13d2cbf11ecae.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Graphics-Debug-0b7eb06869518ca5d05e.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -124,13 +124,13 @@
 					"source" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Graphics",
 					"targetIndexes" : 
 					[
-						9
+						10
 					]
 				},
 				{
 					"build" : "_deps/freetype-build",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.freetype-build-Debug-983be068ccee8c80ae65.json",
+					"jsonFile" : "directory-_deps.freetype-build-Debug-e2f4efdf4185117f99b2.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -140,13 +140,13 @@
 					"source" : "out/build/x64-Debug/_deps/freetype-src",
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				},
 				{
 					"build" : "_deps/pugixml-build",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.pugixml-build-Debug-8b896d3ac0f75befaa6f.json",
+					"jsonFile" : "directory-_deps.pugixml-build-Debug-b932a614716ce23ef034.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -156,7 +156,7 @@
 					"source" : "out/build/x64-Debug/_deps/pugixml-src",
 					"targetIndexes" : 
 					[
-						8
+						9
 					]
 				},
 				{
@@ -171,7 +171,7 @@
 					"source" : "src/core",
 					"targetIndexes" : 
 					[
-						6
+						7
 					]
 				},
 				{
@@ -187,7 +187,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						7
+						8
 					]
 				},
 				{
@@ -213,7 +213,7 @@
 						13
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-2c8537a06aba8f77ef90.json",
+					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-bf588f904bd745d448e3.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.13"
@@ -223,14 +223,14 @@
 					"source" : "out/build/x64-Debug/_deps/googletest-src/googlemock",
 					"targetIndexes" : 
 					[
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
 					"build" : "_deps/googletest-build/googletest",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-ca5edb2e5e889143ba80.json",
+					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-e7ce243c1ef976a595f2.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.13"
@@ -240,8 +240,8 @@
 					"source" : "out/build/x64-Debug/_deps/googletest-src/googletest",
 					"targetIndexes" : 
 					[
-						4,
-						5
+						5,
+						6
 					]
 				},
 				{
@@ -256,7 +256,8 @@
 					"source" : "src/test",
 					"targetIndexes" : 
 					[
-						13
+						1,
+						14
 					]
 				}
 			],
@@ -281,9 +282,10 @@
 					"targetIndexes" : 
 					[
 						0,
-						6,
+						1,
 						7,
-						13
+						8,
+						14
 					]
 				},
 				{
@@ -304,10 +306,10 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						9,
 						10,
 						11,
-						12
+						12,
+						13
 					]
 				},
 				{
@@ -319,7 +321,7 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				},
 				{
@@ -331,7 +333,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						8
+						9
 					]
 				},
 				{
@@ -359,8 +361,8 @@
 					"parentIndex" : 4,
 					"targetIndexes" : 
 					[
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -372,8 +374,8 @@
 					"parentIndex" : 5,
 					"targetIndexes" : 
 					[
-						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -381,9 +383,16 @@
 			[
 				{
 					"directoryIndex" : 10,
-					"id" : "copy-res::@5f1512723eddbe79ddaa",
-					"jsonFile" : "target-copy-res-Debug-b0fefcd3e0fde9c3d107.json",
-					"name" : "copy-res",
+					"id" : "copy-resources::@5f1512723eddbe79ddaa",
+					"jsonFile" : "target-copy-resources-Debug-5f8a2e5d5fa87ce520b6.json",
+					"name" : "copy-resources",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "copy-resources-for-test::@b7fcbc08bf8df37e9c1b",
+					"jsonFile" : "target-copy-resources-for-test-Debug-687e3b029e15170aca18.json",
+					"name" : "copy-resources-for-test",
 					"projectIndex" : 0
 				},
 				{
@@ -424,14 +433,14 @@
 				{
 					"directoryIndex" : 9,
 					"id" : "lib_core::@0618756b1ff51bca1a0e",
-					"jsonFile" : "target-lib_core-Debug-e68888d46fbb70bcf376.json",
+					"jsonFile" : "target-lib_core-Debug-c436ecdc2b01f57aabce.json",
 					"name" : "lib_core",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 10,
 					"id" : "main::@5f1512723eddbe79ddaa",
-					"jsonFile" : "target-main-Debug-48173488747b68c67947.json",
+					"jsonFile" : "target-main-Debug-5970b9aecad2aba1d1c1.json",
 					"name" : "main",
 					"projectIndex" : 0
 				},
@@ -473,7 +482,7 @@
 				{
 					"directoryIndex" : 14,
 					"id" : "unitTests::@b7fcbc08bf8df37e9c1b",
-					"jsonFile" : "target-unitTests-Debug-aed85b2465eba59b2c1e.json",
+					"jsonFile" : "target-unitTests-Debug-013bae057ea18fb1e319.json",
 					"name" : "unitTests",
 					"projectIndex" : 0
 				}

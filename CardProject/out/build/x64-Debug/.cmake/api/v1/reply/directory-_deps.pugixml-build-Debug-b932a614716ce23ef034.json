@@ -57,7 +57,7 @@
 				"_deps/pugixml-build/pugixml.lib"
 			],
 			"targetId" : "pugixml-static::@ec157c7f07670d922be3",
-			"targetIndex" : 8,
+			"targetIndex" : 9,
 			"type" : "target"
 		},
 		{
@@ -73,7 +73,7 @@
 				},
 				{
 					"id" : "pugixml-static::@ec157c7f07670d922be3",
-					"index" : 8
+					"index" : 9
 				}
 			],
 			"paths" : 

@@ -47,7 +47,7 @@
 				"_deps/sfml-build/lib/sfml-graphics-s-d.lib"
 			],
 			"targetId" : "sfml-graphics::@98af38147d5fa7e70f61",
-			"targetIndex" : 9,
+			"targetIndex" : 10,
 			"type" : "target"
 		},
 		{

@@ -32,7 +32,7 @@ void CardFactory::loadXMLfile(const std::string& filename) {
 }
 
 CardData CardFactory::loadResourceCardData(const pugi::xml_node& cardNode) {
-    // Renvoie les données organisées dans une CardData provenant d'un noeud XML de carte ressource
+    // Renvoie les donnï¿½es organisï¿½es dans une CardData provenant d'un noeud XML de carte ressource
   CardData data;
   data.name = cardNode.attribute("name").as_string();
   data.cost = cardNode.attribute("cost").as_int();
@@ -48,7 +48,7 @@ CardData CardFactory::loadResourceCardData(const pugi::xml_node& cardNode) {
 }
 
 std::unique_ptr<Card> CardFactory::createCard(const std::string& cardName) {
-     // Crée une carte à partir de son nom
+     // Crï¿½e une carte ï¿½ partir de son nom
   const CardData& data = cardByName[cardName];
      if (data.name.empty()) {
        throw std::runtime_error("Card '" + cardName +"' not found in the factory.");
@@ -78,3 +78,4 @@ std::vector<std::string> CardFactory::getAvailableCards() {
   }
   return availableCards;
 }
+

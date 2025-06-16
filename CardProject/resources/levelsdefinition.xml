@@ -5,5 +5,5 @@
 	<level id="3" name="Ferme" maxCost="8" targetScore="35"/>
 	<level id="4" name="Ranch" maxCost="8" targetScore="40"/>
 	<level id="5" name="Complexe agricole" maxCost="8" targetScore="50"/>
-	<level id="6" name="Empire agricole" maxCost="7" targetScore="50"/>
+	<level id="6" name="Empire agricole" maxCost="7" targetScore="1000"/>
 </levels>

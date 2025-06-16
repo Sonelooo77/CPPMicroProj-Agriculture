@@ -6,19 +6,17 @@
 #include "CardFactory.h"
 #include "ResourceCard.h"
 
-#define DECK_FIXED_SIZE 20
+#define DECK_SIZE 20
 #define HAND_SIZE 5
 
-GameManager::GameManager(std::unique_ptr<Level> level)
-    : currentLevel(std::move(level)),
+GameManager::GameManager(int startingLevelId)
+    : currentLevelId(startingLevelId),
       currentScore(0),
       currentCost(0),
       gameState(GameState::Playing),
+      levelFactory(nullptr),
       cardFactory(nullptr),
       gen(rd()) {
-  if (!currentLevel) {
-    throw std::runtime_error("GameManager : Level cannot be null");
-  }
 }
 
 void GameManager::setCardFactory(CardFactory* factory) {
@@ -28,10 +26,23 @@ void GameManager::setCardFactory(CardFactory* factory) {
   cardFactory = factory;
 }
 
+
+void GameManager::setLevelFactory(LevelFactory* factory) {
+  if (!factory) {
+    throw std::runtime_error("GameManager : LevelFactory cannot be null");
+  }
+  levelFactory = factory;
+}
+
 void GameManager::startLevel() {
   if (!cardFactory) {
     throw std::runtime_error("GameManager : CardFactory must be set before starting level");
   }
+  if (!levelFactory) {
+    throw std::runtime_error("GameManager : LevelFactory must be set before starting level");
+  }
+
+  currentLevel = levelFactory->createLevel(currentLevelId);
 
   currentScore = 0;
   currentCost = 0;
@@ -43,11 +54,10 @@ void GameManager::startLevel() {
   initializeDeck();
   dealInitialHand();
 
-  std::cout << "=== Level '" << currentLevel->getName()
+  std::cout << "=== Level " << currentLevelId << " '" << currentLevel->getName()
             << "' started ! ===" << std::endl;
-  std::cout << "Goal: " << currentLevel->getTargetScore()
-            << " points with a " << currentLevel->getMaxCost() << " maxmimal cost."
-            << std::endl;
+  std::cout << "Goal: " << currentLevel->getTargetScore() << " points with a "
+            << currentLevel->getMaxCost() << " maxmimal cost." << std::endl;
 }
 
 void GameManager::initializeDeck() {
@@ -57,7 +67,7 @@ void GameManager::initializeDeck() {
 }
 
 void GameManager::refillDeck() {
-  while (deckCardNames.size() < DECK_FIXED_SIZE) {
+  while (deckCardNames.size() < DECK_SIZE) {
     deckCardNames.push_back(getRandomCardName());
   }
 }
@@ -74,12 +84,26 @@ void GameManager::dealInitialHand() {
 }
 
 bool GameManager::canPlayCard(const Card& card) const {
-  return (currentCost + card.getCost()) <= currentLevel->getMaxCost();
+  if ((currentCost + card.getCost()) <= currentLevel->getMaxCost()) {
+    return true;
+  }
+  return false;
+}
+
+bool GameManager::canPlayAnyCard() { 
+  for (const auto& c : playerHand) {
+    if (canPlayCard(*c)) {
+      return true;
+    }
+  }
+  return false; 
 }
 
 void GameManager::playCard(Card& card) {
   if (!canPlayCard(card)) {
-    throw std::runtime_error("Cannot play card: insufficient remaining cost");
+    if (!canPlayAnyCard()) {
+      checkGameState(false);
+    }
   }
 
   currentCost += card.getCost();
@@ -89,10 +113,9 @@ void GameManager::playCard(Card& card) {
 
   card.play();
 
-  auto* resourceCard = dynamic_cast<ResourceCard*>(&card);
-  if (resourceCard) {
-    currentScore += resourceCard->getLastScore();
-    std::cout << "Added score : " << resourceCard->getLastScore()
+  if (card.isResourceCard()) {
+    currentScore += card.getLastScore();
+    std::cout << "Added score : " << card.getLastScore()
               << " (Total: " << currentScore << "/"
               << currentLevel->getTargetScore() << ")" << std::endl;
   }
@@ -101,12 +124,12 @@ void GameManager::playCard(Card& card) {
             << currentLevel->getMaxCost() << std::endl;
 
   checkGameState();
+  if (gameState == GameState::Playing) {
+    drawCard();
+  }
 }
 
 void GameManager::drawCard() {
-  if (playerHand.size() >= 10) {
-    return;
-  }
 
   if (deckCardNames.size() < 5) {
     refillDeck();
@@ -136,12 +159,40 @@ void GameManager::removeCardFromHand(size_t index) {
   }
 }
 
-void GameManager::checkGameState() {
+void GameManager::checkGameState(bool canPlay) {
   if (currentScore >= currentLevel->getTargetScore()) {
     gameState = GameState::Won;
     std::cout << "Your farm survived, for today. | Score : " << currentScore << std::endl;
-  } else if (currentCost > currentLevel->getMaxCost()) {
+  } else if (!canPlay || currentCost > currentLevel->getMaxCost()) {
     gameState = GameState::Lost;
     std::cout << "Your production is a complete mess and your farm will never be used again. | Cost : " << currentCost << " > " << currentLevel->getMaxCost() << std::endl;
   }
+}
+
+bool GameManager::nextLevel() {
+  if (gameState != GameState::Won) {
+    return false;
+  }
+
+  if (!hasNextLevel()) {
+    return false;
+  }
+
+  int nextLevelId = currentLevelId + 1;
+
+  currentLevelId = nextLevelId;
+  std::cout << "Advancing to level " << currentLevelId << " !" << std::endl;
+  return true;
+}
+
+void GameManager::restart() {
+  currentLevelId = 1;
+}
+
+bool GameManager::hasNextLevel() const {
+  return levelFactory && levelFactory->levelExists(currentLevelId + 1);
+}
+
+bool GameManager::isGameCompleted() const {
+  return gameState == GameState::Won && !hasNextLevel();
 }

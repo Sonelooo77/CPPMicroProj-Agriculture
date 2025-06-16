@@ -1,16 +1,24 @@
 # CPPMicroProj-Agriculture
-A micro-project written in C++ using SFML to emulate a luck-based card game.
+Un micro-jeu en C++ basé sur la chance autour du thème de l'agriculture et de sa potentielle considération comme la plus grande erreur de l'humanité.
 
-# Goal
-Gain points by using ressource and tool cards to achieve a defined quota, without exceding a cost.
+# But du jeu
+Le but du jeu est de gagner le plus de points possible en utilisant des cartes qui représentent des actions agricoles. Chaque carte a un nombre de dés à lancer, et le score est la somme des résultats des dés. Des cartes outils peuvent être utilisées pour améliorer le score.
 
-# Game
-5 cards are drawn initially, and each time a card is used, a new card is drawn. Each card has a defined number of dices thrown when the card is used, gaining an amount of point equal to the sum of the dices numbers. Tool cards can help the player to achieve better score. 
+# Ancrage au thème
+Le hasard de chaque carte ressource représente les aléas de la production d'un agriculteur, tandis que les cartes outils représentent les innovations qui peuvent améliorer la production.
+Le jeu souligne le fait que l'agriculture n'est pas une science exacte, mais plutôt un domaine où le hasard joue un rôle important, où la rémunération des agriculteurs en dépend.
 
-# Desgin and optimizations
-- The game is designed to be played by a single player, with a simple interface to draw cards and use them.
-- The game uses SFML for rendering and input handling, providing a simple graphical interface.
-- PugiXML is used for loading card AND LEVEL data from XML files, allowing easy modification and expansion of the game.
-- Cards and level are created using a Factory Design Pattern
-- Deck is a fixed size vector of card names, that are created only when they are drawn. In this case, a new card name is added to the deck vector without changing its size.
-- Card is a abstract class and ResourceCards and ToolCards are derived from Card.
+# Comment jouer ?
+Le joueur dispose de 5 cartes tirées aléatoirement au début du jeu. À chaque tour, il peut choisir de jouer une carte ressource ou une carte outil. Les cartes ressources sont utilisées pour lancer des dés et accumuler des points, tandis que les cartes outils peuvent être utilisées pour améliorer le score des cartes ressources.
+Lorsqu'une carte est jouée, elle est retirée de la main du joueur et une nouvelle carte est tirée du paquet. Le jeu se termine lorsque le joueur a dépassé le quota de points nécessaire, ou alors lorsqu'il a dépassé le coût maximal.
+Le jeu est sous la forme d'un point & click.
+
+# Design et optimisations
+- Utilisation de SFML pour l'affichage et la gestion des inputs.
+- PugiXML est utilisé pour permettre une customisation simple et rapide des cartes et niveaux.
+- Les cartes et les niveaux sont générés dynamiquement à partir de fichiers XML, à l'aide du Design Pattern Factory.
+- La pioche est un vecteur de nom de cartes, et les cartes sont créées dynamiquement à partir de ces noms, permettant de ne pas avoir à créer un grand nombre de carte pour créer la pioche.
+- La classe Card est abstraite, facilitant l'implémentation et l'ajout de différent types de cartes (Resource, tool, etc..)
+
+# Diagramme de classe
+![Diagramme de classe]()

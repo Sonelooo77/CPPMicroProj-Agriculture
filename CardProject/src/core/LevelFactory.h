@@ -23,5 +23,6 @@ class LevelFactory {
  public:
   LevelFactory(const std::string& configFile = "res/data/levels.xml");
 
+  bool levelExists(int levelId);
   std::unique_ptr<Level> createLevel(int levelId);
 };

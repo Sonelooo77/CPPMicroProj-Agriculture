@@ -1,51 +1,59 @@
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 #include "CardFactory.h"
 #include "GameManager.h"
 #include "LevelFactory.h"
+#include "main.h"
 
 int main() {
-  CardFactory cardFactory("resources/cardstest.xml");
-  LevelFactory levelFactory("resources/levelstest.xml");
+  CardFactory cardFactory("resources/cardsdefinition.xml");
+  LevelFactory levelFactory("resources/levelsdefinition.xml");
 
-  auto level = levelFactory.createLevel(1);
-  GameManager game(std::move(level));
+  GameManager game;
   game.setCardFactory(&cardFactory);
+  game.setLevelFactory(&levelFactory);
+
   game.startLevel();
 
-  std::cout << "=== ETAT INITIAL ===" << std::endl;
-  std::cout << "Niveau: " << game.getLevelName() << std::endl;
-  std::cout << "Score: " << game.getCurrentScore() << "/"
-            << game.getTargetScore() << std::endl;
-  std::cout << "Cout: " << game.getCurrentCost() << "/"
-            << game.getCurrentMaxCost() << std::endl;
-  do {
-  std::cout << "\n=== MAIN ===" << std::endl;
-  const auto& hand = game.getPlayerHand();
-  for (size_t i = 0; i < hand.size(); ++i) {
-    std::cout << i << ". " << hand[i]->getName()
-              << " (cout: " << hand[i]->getCost() << ")" << std::endl;
+  while (true) {
+    std::cout << "\n=== CURRENT STATE ===" << std::endl;
+    std::cout << "Level " << game.getCurrentLevelId() << " - "
+              << game.getLevelName() << std::endl;
+    std::cout << "Score: " << game.getCurrentScore() << "/"
+              << game.getTargetScore() << std::endl;
+    std::cout << "Cost: " << game.getCurrentCost() << "/"
+              << game.getCurrentMaxCost() << std::endl;
+
+    const auto& hand = game.getPlayerHand();
+    for (size_t i = 0; i < hand.size(); ++i) {
+      std::cout << i << ". " << hand[i]->getName()
+                << " (cost: " << hand[i]->getCost() << ")" << std::endl;
+    }
+
+    Card* firstCard = game.getCardInHand(0);
+    std::cout << "\nPlayed card: " << firstCard->getName() << std::endl;
+
+    game.playCard(*firstCard);
+    game.removeCardFromHand(0);
+
+    if (game.isGameWon()) {
+      std::cout << "Level cleared !" << std::endl;
+      if (!game.isGameCompleted()) {
+        game.nextLevel();
+        game.startLevel();
+      } else {
+        std::cout << "Game won !" << std::endl;
+        break;
+      }
+    } else if (game.isGameLost()) {
+      std::cout << "Game lost !" << std::endl;
+      game.restart();
+      game.startLevel(); 
+    }
+    std::this_thread::sleep_for(std::chrono::seconds(1));
   }
 
-  Card* firstCard = game.getCardInHand(0);
-  std::cout << "\nJoue la premiere carte: " << firstCard->getName()
-            << std::endl;
-
-  game.playCard(*firstCard);
-  game.removeCardFromHand(0);
-
-  std::cout << "\n=== ETAT FINAL ===" << std::endl;
-  std::cout << "Score: " << game.getCurrentScore() << "/"
-            << game.getTargetScore() << std::endl;
-  std::cout << "Cout: " << game.getCurrentCost() << "/"
-            << game.getCurrentMaxCost() << std::endl;
-  } while (!game.isGameWon() && !game.isGameLost() && game.isGameRunning());
-
-  if (game.isGameWon()) {
-    std::cout << "VICTOIRE !" << std::endl;
-  } else if (game.isGameLost()) {
-    std::cout << "DEFAITE !" << std::endl;
-  }
   return 0;
-
 }

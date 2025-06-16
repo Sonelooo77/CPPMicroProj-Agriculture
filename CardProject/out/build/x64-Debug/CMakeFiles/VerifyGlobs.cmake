@@ -7,6 +7,7 @@ file(GLOB NEW_GLOB LIST_DIRECTORIES true "C:/Users/sonel/Documents/CPP/MicroProj
 set(OLD_GLOB
   "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/resources/cardsdefinition.xml"
   "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/resources/cardstest.xml"
+  "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/resources/levelsdefinition.xml"
   "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/resources/levelstest.xml"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

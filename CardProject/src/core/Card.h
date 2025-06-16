@@ -15,4 +15,6 @@ class Card {
 		virtual void play() = 0;
         virtual ~Card() = default;
         virtual bool canBePlayed(int& remaining_cost) const { return remaining_cost >= cost;}
+        virtual int getLastScore() const { return 0; }
+        virtual bool isResourceCard() const { return false; }
 };

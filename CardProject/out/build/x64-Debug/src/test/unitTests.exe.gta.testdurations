@@ -2,17 +2,17 @@
 <GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Executable>C:\Users\sonel\Documents\CPP\MicroProjet\CardProject\out\build\x64-Debug\src\test\unitTests.exe</Executable>
   <TestDurations>
-    <TestDuration Test="TestDice.Roll2D6" Duration="1" />
+    <TestDuration Test="TestDice.Roll2D6" Duration="2" />
     <TestDuration Test="TestDice.Roll10D20" Duration="1" />
     <TestDuration Test="TestDice.PlusOperator" Duration="1" />
     <TestDuration Test="TestDice.ConcatenationOperator" Duration="1" />
     <TestDuration Test="TestCardFactory.MultipleDifferentDices" Duration="1" />
-    <TestDuration Test="TestCardFactory.ResourceCardFactory" Duration="1" />
-    <TestDuration Test="TestLevelFactory.CreateValidLevel" Duration="1" />
+    <TestDuration Test="TestCardFactory.ResourceCardFactory" Duration="10" />
+    <TestDuration Test="TestLevelFactory.CreateValidLevel" Duration="8" />
     <TestDuration Test="TestGameManagerDeck.DeckInitializesWithCards" Duration="1" />
     <TestDuration Test="TestGameManagerDeck.DrawCardAlwaysWorks" Duration="23" />
     <TestDuration Test="TestDeck.DeckInitializesWithCards" Duration="1" />
-    <TestDuration Test="TestDeck.DrawCardAlwaysWorks" Duration="23" />
+    <TestDuration Test="TestDeck.DrawCardAlwaysWorks" Duration="7" />
     <TestDuration Test="TestDeck.RandomnessInDeck" Duration="3" />
   </TestDurations>
 </GtaTestDurations>

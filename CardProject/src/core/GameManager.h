@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "Level.h"
+#include "LevelFactory.h"
 
 class CardFactory;
 class Card;
@@ -15,11 +16,13 @@ enum class GameState { Playing, Won, Lost };
 class GameManager {
  private:
   std::unique_ptr<Level> currentLevel;
+  int currentLevelId;
   int currentScore;
   int currentCost;
   GameState gameState;
 
   CardFactory* cardFactory;
+  LevelFactory* levelFactory;
   std::vector<std::unique_ptr<Card>> playerHand;
   std::vector<std::unique_ptr<Card>> discardPile;
 
@@ -29,18 +32,20 @@ class GameManager {
   std::mt19937 gen;
 
   void dealInitialHand();
-  void checkGameState();
+  void checkGameState(bool canPlay = true);
   void initializeDeck();
   void refillDeck();
   std::string getRandomCardName();
 
  public:
-  GameManager(std::unique_ptr<Level> level);
+  GameManager(int startingLevelId = 1);
 
   void setCardFactory(CardFactory* factory);
+  void setLevelFactory(LevelFactory* factory);
   void startLevel();
 
   bool canPlayCard(const Card& card) const;
+  bool canPlayAnyCard();
   void playCard(Card& card);
   void drawCard();
 
@@ -55,6 +60,7 @@ class GameManager {
   bool isGameLost() const { return gameState == GameState::Lost; }
   bool isGameRunning() const { return gameState == GameState::Playing; }
 
+  int getCurrentLevelId() const { return currentLevelId; }
   int getCurrentMaxCost() const { return currentLevel->getMaxCost(); }
   int getCurrentScore() const { return currentScore; }
   int getCurrentCost() const { return currentCost; }
@@ -63,4 +69,9 @@ class GameManager {
   }
   int getTargetScore() const { return currentLevel->getTargetScore(); }
   const std::string& getLevelName() const { return currentLevel->getName(); }
+
+  bool nextLevel();
+  void restart();
+  bool hasNextLevel() const;
+  bool isGameCompleted() const;
 };

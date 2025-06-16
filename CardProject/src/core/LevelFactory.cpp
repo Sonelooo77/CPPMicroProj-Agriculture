@@ -42,3 +42,7 @@ std::unique_ptr<Level> LevelFactory::createLevel(int levelId) {
   const LevelData& data = levelDataById[levelId];  
   return std::make_unique<Level>(data.id, data.maxCost, data.targetScore,data.name);
 }
+
+bool LevelFactory::levelExists(int levelId) {  
+ return levelDataById.find(levelId) != levelDataById.end();  
+}

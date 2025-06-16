@@ -92,6 +92,7 @@ TEST(TestDeck, DrawCardAlwaysWorks) {
 
   GameManager game;
   game.setCardFactory(&cardFactory);
+  game.setLevelFactory(&levelFactory);
   game.startLevel();
 
   size_t initialHandSize = game.getHandSize();
@@ -108,8 +109,8 @@ TEST(TestDeck, RandomnessInDeck) {
   CardFactory cardFactory("resources/cardstest.xml");
   LevelFactory levelFactory("resources/levelstest.xml");
 
-  auto level = levelFactory.createLevel(1);
   GameManager game;
+  game.setLevelFactory(&levelFactory);
   game.setCardFactory(&cardFactory);
   game.startLevel();
 

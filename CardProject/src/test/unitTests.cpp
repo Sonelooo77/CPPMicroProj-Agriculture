@@ -76,9 +76,10 @@ TEST(TestDeck, DeckInitializesWithCards) {
   CardFactory cardFactory("resources/cardstest.xml");
   LevelFactory levelFactory("resources/levelstest.xml");
 
-  auto level = levelFactory.createLevel(1);
-  GameManager game(std::move(level));
+
+  GameManager game;
   game.setCardFactory(&cardFactory);
+  game.setLevelFactory(&levelFactory);
   game.startLevel();
 
   EXPECT_EQ(game.getHandSize(), 5);
@@ -89,8 +90,7 @@ TEST(TestDeck, DrawCardAlwaysWorks) {
   CardFactory cardFactory("resources/cardstest.xml");
   LevelFactory levelFactory("resources/levelstest.xml");
 
-  auto level = levelFactory.createLevel(1);
-  GameManager game(std::move(level));
+  GameManager game;
   game.setCardFactory(&cardFactory);
   game.startLevel();
 
@@ -109,7 +109,7 @@ TEST(TestDeck, RandomnessInDeck) {
   LevelFactory levelFactory("resources/levelstest.xml");
 
   auto level = levelFactory.createLevel(1);
-  GameManager game(std::move(level));
+  GameManager game;
   game.setCardFactory(&cardFactory);
   game.startLevel();
 

@@ -4,11 +4,22 @@
 		<dice min="1" max="6" count="2"/>
 	</resource_card>
 	<resource_card name="Ble" cost="2">
-		<dice min="0" max="3" count="7"/>
+		<dice min="0" max="3" count="10"/>
 	</resource_card>
 	<resource_card name="Betterave" cost="3">
-		<dice min="4" max="10" count=""/>
-		<dice min="2" max="12" count=""/>
-		<dice min="0" max="14" count=""/>
+		<dice min="4" max="10" count="1"/>
+		<dice min="2" max="12" count="1"/>
+		<dice min="0" max="14" count="1"/>
+	</resource_card>
+	<resource_card name="Chou" cost="1">
+		<dice min="0" max="2" count="3"/>
+		<dice min="1" max="4" count="2"/>
+	</resource_card>
+	<resource_card name="Tomate" cost="2">
+		<dice min="0" max="3" count="3"/>
+		<dice min="1" max="6" count="2"/>
+	</resource_card>
+	<resource_card name="Citrouille" cost="3">
+		<dice min="0" max="40" count="1"/>
 	</resource_card>
 </cards>

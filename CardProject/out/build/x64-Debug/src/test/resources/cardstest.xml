@@ -7,8 +7,8 @@
 		<dice min="0" max="3" count="7"/>
 	</resource_card>
 	<resource_card name="Betterave" cost="3">
-		<dice min="4" max="10" count=""/>
-		<dice min="2" max="12" count=""/>
-		<dice min="0" max="14" count=""/>
+		<dice min="4" max="10" count="1"/>
+		<dice min="2" max="12" count="1"/>
+		<dice min="0" max="14" count="1"/>
 	</resource_card>
 </cards>

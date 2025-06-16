@@ -86,7 +86,7 @@ void renderCards(sf::RenderWindow& window, const std::vector<std::unique_ptr<Car
 void renderScoreText(sf::RenderWindow& window, sf::Font& font, const std::vector<sf::Sprite>& sprites, int lastCard, int lastScore, int scoreDisplayTimer) {
     if (scoreDisplayTimer > 0 && lastCard >= 0) {
         sf::Text cardScoreText = showCardScore(lastScore, font, 4.25f * scoreDisplayTimer);
-        cardScoreText.setPosition({sprites[lastCard].getPosition().x, sprites[lastCard].getPosition().y - 30.f});
+        cardScoreText.setPosition({sprites[lastCard].getPosition().x, sprites[lastCard].getPosition().y - 60.f});
         window.draw(cardScoreText);
     }
 }
@@ -103,3 +103,19 @@ void renderGameOver(sf::RenderWindow& window, sf::Font& font, float windowHeight
     window.clear();
     window.draw(gameOverText);
 }
+
+void renderNextLevel(sf::RenderWindow& window, sf::Font& font, float windowHeight, int NextLevelTimer) {
+    if (NextLevelTimer > 0) {
+        sf::Text nextLever(font);
+        nextLever.setString("Next Level !!");
+        nextLever.setCharacterSize(30);
+        if (NextLevelTimer%15 == 0) nextLever.setFillColor(sf::Color(255, 255, 255, 0));
+        else nextLever.setFillColor(sf::Color(255, 255, 255, 255));
+        sf::FloatRect textRect = nextLever.getLocalBounds();
+        // nextLever.setOrigin({textRect.position.x + textRect.size.x / 2.0f, textRect.position.y + textRect.size.y / 2.0f});
+        nextLever.setPosition({windowHeight * 0.4f, windowHeight * 0.5f});
+        nextLever.setStyle(sf::Text::Bold);
+        window.draw(nextLever);
+    }
+}
+

@@ -38,6 +38,7 @@ int main() {
     int lastCard = -1;
     int lastScore = 0;
     int scoreDisplayTimer = 0;
+    int NextLevelTimer = 0;
 
     while (window.isOpen()) {
         window.clear();
@@ -75,11 +76,16 @@ int main() {
 
         renderScoreText(window, font, sprites, lastCard, lastScore, scoreDisplayTimer);
         if (scoreDisplayTimer > 0) --scoreDisplayTimer;
+        if (NextLevelTimer > 0) {
+            renderNextLevel(window, font, windowHeight, NextLevelTimer);
+            --NextLevelTimer;
+        }
 
         if (game.isGameWon()) {
             std::cout << "Level cleared!" << std::endl;
             if (!game.isGameCompleted()) {
                 game.nextLevel();
+                NextLevelTimer = 60;
                 game.startLevel();
             } else {
                 std::cout << "Game won!" << std::endl;

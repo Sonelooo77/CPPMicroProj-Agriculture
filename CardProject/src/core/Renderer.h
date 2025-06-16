@@ -39,5 +39,9 @@ void renderGameOver(sf::RenderWindow& window,
                     sf::Font& font,
                     float windowHeight);
 
+void renderNextLevel(sf::RenderWindow& window,
+                    sf::Font& font,
+                    float windowHeight,
+                    int NextLevelTimer);
 
 #endif //RENDERER_H

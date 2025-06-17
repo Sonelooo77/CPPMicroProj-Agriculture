@@ -12,7 +12,8 @@
     <TestDuration Test="TestGameManagerDeck.DeckInitializesWithCards" Duration="1" />
     <TestDuration Test="TestGameManagerDeck.DrawCardAlwaysWorks" Duration="23" />
     <TestDuration Test="TestDeck.DeckInitializesWithCards" Duration="1" />
-    <TestDuration Test="TestDeck.DrawCardAlwaysWorks" Duration="23" />
+    <TestDuration Test="TestDeck.DrawCardAlwaysWorks" Duration="22" />
     <TestDuration Test="TestDeck.RandomnessInDeck" Duration="3" />
+    <TestDuration Test="TestGameManagerLogic.PlayCardUpdatesScoreAndCost" Duration="1" />
   </TestDurations>
 </GtaTestDurations>

@@ -126,3 +126,25 @@ TEST(TestDeck, RandomnessInDeck) {
 
   EXPECT_GT(drawnCardNames.size(), 1);
 }
+
+TEST(TestGameManagerLogic, BasicGameAlogrithm) {
+  CardFactory cardFactory("resources/cardstest.xml");
+  LevelFactory levelFactory("resources/levelstest.xml");
+
+  GameManager game;
+  game.setCardFactory(&cardFactory);
+  game.setLevelFactory(&levelFactory);
+  game.startLevel();
+
+  int initialScore = game.getCurrentScore();
+  int initialCost = game.getCurrentCost();
+
+  Card* card = game.getCardInHand(0);
+  int cardCost = card->getCost();
+
+  game.playCard(*card);
+
+  EXPECT_EQ(game.getCurrentCost(), initialCost + cardCost);
+  EXPECT_GT(game.getCurrentScore(), initialScore);
+  EXPECT_TRUE(game.isGameRunning() || game.isGameWon() || game.isGameLost());
+}

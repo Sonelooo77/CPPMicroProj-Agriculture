@@ -166,3 +166,10 @@
 248	3211	7718728595117744	src/core/CMakeFiles/lib_core.dir/Renderer.cpp.obj	a44e3268f9daabac
 3212	3279	7718728624811380	src/core/lib_core.lib	abf723bb5349e8a2
 3279	3555	7718728625441990	src/main/main.exe	637dc555229f9784
+93	126	7718736268690236	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/CMakeFiles/cmake.verify_globs	7c72c1a1854e42a3
+171	278	7718736270274773	src/test/resources	a931bfc440bec88b
+171	278	7718736270274773	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/resources	a931bfc440bec88b
+278	3116	7718736270588417	src/test/CMakeFiles/unitTests.dir/unitTests.cpp.obj	504d3238a9e4b442
+3117	3738	7718736305072606	src/test/unitTests.exe	36c3b4782e2547f2
+3117	3738	7718736305072606	src/test/unitTests[1]_tests.cmake	36c3b4782e2547f2
+3117	3738	7718736305072606	C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug/src/test/unitTests[1]_tests.cmake	36c3b4782e2547f2

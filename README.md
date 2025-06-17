@@ -22,4 +22,4 @@ Le jeu est sous la forme d'un point & click.
 
 # Diagramme de classe
 [diagramme_classe](https://github.com/user-attachments/assets/0783c5a2-715a-43f9-a818-2aa9f833dec4)
-se]()
+

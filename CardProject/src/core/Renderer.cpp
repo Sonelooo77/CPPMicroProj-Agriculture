@@ -12,7 +12,7 @@ sf::Text showCardScore(const int score, sf::Font& font, int opacity) {
     sf::Text cardScoreText(font);
     cardScoreText.setFillColor(sf::Color(255, 255, 255, opacity));
     std::ostringstream stream;
-    stream << "Score: " << score;
+    stream << "Farm Power:" << score;
     cardScoreText.setString(stream.str());
     cardScoreText.setCharacterSize(20);
     return cardScoreText;
@@ -39,8 +39,8 @@ void renderInfo(sf::RenderWindow& window, sf::Font& font, GameManager& game) {
     info.setCharacterSize(24);
     info.setFillColor(sf::Color::White);
     std::ostringstream stream;
-    stream << "Level " << game.getCurrentLevelId() << " - " << game.getLevelName() << "\n"
-           << "Score: " << game.getCurrentScore() << "/" << game.getTargetScore() << "\n"
+    stream << "Location " << game.getCurrentLevelId() << " - " << game.getLevelName() << "\n"
+           << "Farm power: " << game.getCurrentScore() << "/" << game.getTargetScore() << "\n"
            << "Cost: " << game.getCurrentCost() << "/" << game.getCurrentMaxCost();
     info.setString(stream.str());
     info.setPosition({windowWidth * 0.05f, windowHeight * 0.05f});
@@ -55,7 +55,7 @@ void renderRetryText(sf::RenderWindow& window, sf::Font& font) {
     sf::Text retry(font);
     retry.setCharacterSize(20);
     retry.setFillColor(sf::Color::White);
-    retry.setString("Appuyez sur R pour recommencer");
+    retry.setString("Press R to restart.");
     retry.setPosition({windowWidth * 0.65f, windowHeight * 0.05f});
     window.draw(retry);
 }
@@ -93,7 +93,7 @@ void renderScoreText(sf::RenderWindow& window, sf::Font& font, const std::vector
 
 void renderGameOver(sf::RenderWindow& window, sf::Font& font, float windowHeight) {
     sf::Text gameOverText(font);
-    gameOverText.setString("          Game Over\nAppuyez sur R pour recommencer");
+    gameOverText.setString("          You no longer have enough crops to be profitable this season. You now regret your decision to become a farmer.\nPress R to restart.");
     gameOverText.setCharacterSize(20);
     gameOverText.setFillColor(sf::Color::Red);
     sf::FloatRect textRect = gameOverText.getLocalBounds();
@@ -107,7 +107,7 @@ void renderGameOver(sf::RenderWindow& window, sf::Font& font, float windowHeight
 void renderNextLevel(sf::RenderWindow& window, sf::Font& font, float windowHeight, int NextLevelTimer) {
     if (NextLevelTimer > 0) {
         sf::Text nextLever(font);
-        nextLever.setString("Next Level !!");
+        nextLever.setString("Moving to a bigger location !");
         nextLever.setCharacterSize(30);
         if (NextLevelTimer%15 == 0) nextLever.setFillColor(sf::Color(255, 255, 255, 0));
         else nextLever.setFillColor(sf::Color(255, 255, 255, 255));

@@ -685,6 +685,12 @@
 },
 {
   "directory": "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug",
+  "command": "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1443~1.348\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DSFML_STATIC -IC:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\src\\core\\. -IC:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\out\\build\\x64-Debug\\_deps\\pugixml-src\\src -IC:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\out\\build\\x64-Debug\\_deps\\sfml-src\\include /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi /Fosrc\\core\\CMakeFiles\\lib_core.dir\\Renderer.cpp.obj /Fdsrc\\core\\CMakeFiles\\lib_core.dir\\lib_core.pdb /FS -c C:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\src\\core\\Renderer.cpp",
+  "file": "C:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\src\\core\\Renderer.cpp",
+  "output": "src\\core\\CMakeFiles\\lib_core.dir\\Renderer.cpp.obj"
+},
+{
+  "directory": "C:/Users/sonel/Documents/CPP/MicroProjet/CardProject/out/build/x64-Debug",
   "command": "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1443~1.348\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DSFML_STATIC -IC:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\src\\core\\. -IC:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\out\\build\\x64-Debug\\_deps\\pugixml-src\\src -IC:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\out\\build\\x64-Debug\\_deps\\sfml-src\\include /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi /Fosrc\\main\\CMakeFiles\\main.dir\\main.cpp.obj /Fdsrc\\main\\CMakeFiles\\main.dir\\ /FS -c C:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\src\\main\\main.cpp",
   "file": "C:\\Users\\sonel\\Documents\\CPP\\MicroProjet\\CardProject\\src\\main\\main.cpp",
   "output": "src\\main\\CMakeFiles\\main.dir\\main.cpp.obj"

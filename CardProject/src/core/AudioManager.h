@@ -9,8 +9,8 @@
 
 class AudioManager {
 public:
-    explicit AudioManager(const std::string &filename);
-    void play();
+    explicit AudioManager();
+    void play(const std::string &filename);
     void combo(int i);
     sf::Sound::Status getStatus() const;
 private:

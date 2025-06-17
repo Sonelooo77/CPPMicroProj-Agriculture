@@ -85,7 +85,7 @@ void renderCards(sf::RenderWindow& window, const std::vector<std::unique_ptr<Car
 }
 
 void renderScoreText(sf::RenderWindow& window, sf::Font& font, const std::vector<sf::Sprite>& sprites, int lastCard, const std::vector<int>& diceResults, int scoreDisplayTimer) {
-    int totalFrames = 250;
+    int totalFrames = diceResults.size()*30;
     int resultsToShow = (totalFrames - scoreDisplayTimer) / 30 + 1;
     resultsToShow = std::min(resultsToShow, static_cast<int>(diceResults.size()));
     int currentScore = 0;
@@ -101,7 +101,7 @@ void renderScoreText(sf::RenderWindow& window, sf::Font& font, const std::vector
 
 void renderGameOver(sf::RenderWindow& window, sf::Font& font, float windowHeight) {
     sf::Text gameOverText(font);
-    gameOverText.setString("          You no longer have enough crops to be profitable this season. You now regret your decision to become a farmer.\nPress R to restart.");
+    gameOverText.setString("          You no longer have enough crops to be profitable this season. \nYou now regret your decision to become a farmer.\nPress R to restart.");
     gameOverText.setCharacterSize(20);
     gameOverText.setFillColor(sf::Color::Red);
     sf::FloatRect textRect = gameOverText.getLocalBounds();
@@ -121,7 +121,7 @@ void renderNextLevel(sf::RenderWindow& window, sf::Font& font, float windowHeigh
         else nextLever.setFillColor(sf::Color(255, 255, 255, 255));
         sf::FloatRect textRect = nextLever.getLocalBounds();
         // nextLever.setOrigin({textRect.position.x + textRect.size.x / 2.0f, textRect.position.y + textRect.size.y / 2.0f});
-        nextLever.setPosition({windowHeight * 0.4f, windowHeight * 0.5f});
+        nextLever.setPosition({windowHeight * 0.35f, windowHeight * 0.3f});
         nextLever.setStyle(sf::Text::Bold);
         window.draw(nextLever);
     }
@@ -129,11 +129,10 @@ void renderNextLevel(sf::RenderWindow& window, sf::Font& font, float windowHeigh
 
 void renderDiceRoll(sf::RenderWindow& window, sf::Font& font, float windowHeight, float windowWidth, const std::vector<int>& diceResults, int diceAnimationTime, AudioManager& audioManager) {
     if (diceResults.empty()) return;
-    int totalFrames = 250;
+    int totalFrames = diceResults.size()*30;
     int resultsToShow = (totalFrames - diceAnimationTime) / 30 + 1;
     resultsToShow = std::min(resultsToShow, static_cast<int>(diceResults.size()));
     if ((totalFrames - diceAnimationTime)%29 == 0 && resultsToShow < diceResults.size()) {
-        std::cout << "AudioManager combo called with resultsToShow: " << resultsToShow << std::endl;
         audioManager.combo(resultsToShow);
     }
     sf::Text diceText(font);

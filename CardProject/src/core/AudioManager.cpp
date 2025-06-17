@@ -5,14 +5,14 @@
 #include "AudioManager.h"
 #include <SFML/Audio.hpp>
 
-AudioManager::AudioManager(const std::string& filename)
+AudioManager::AudioManager()
     : buffer(), audio(buffer)
 {
-    if (!buffer.loadFromFile(filename)) {
-    }
 }
 
-void AudioManager::play() {
+void AudioManager::play(const std::string& filename) {
+    buffer= sf::SoundBuffer(filename);
+    audio = sf::Sound(buffer);
     audio.play();
 }
 

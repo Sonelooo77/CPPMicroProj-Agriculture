@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 #include <sstream>
 
 
@@ -11,6 +12,7 @@ class Card {
     public:
         int getCost() const { return cost; }
         std::string getName() const { return name; }
+		virtual const std::vector<int>& getLastDiceDetails() const { static std::vector<int> empty; return empty;}
         Card(std::string name, int cost) : name(name), cost(cost) {}
 		virtual void play() = 0;
         virtual ~Card() = default;

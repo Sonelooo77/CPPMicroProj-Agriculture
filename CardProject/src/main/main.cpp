@@ -4,7 +4,9 @@
 #include "CardFactory.h"
 #include "GameManager.h"
 #include "LevelFactory.h"
-#include "renderer.h"
+#include "Renderer.h"
+#include "AudioManager.h"
+
 
 int main() {
     CardFactory cardFactory("resources/cardsdefinition.xml");
@@ -39,8 +41,16 @@ int main() {
     int lastScore = 0;
     int scoreDisplayTimer = 0;
     int NextLevelTimer = 0;
+    int diceAnimationTime = 0;
+    std::vector<int> lastDiceDetails;
+
+
+    AudioManager notedo("resources/sounds/do.wav");
+    notedo.play();
 
     while (window.isOpen()) {
+
+
         window.clear();
         window.draw(backgroundSprite);
 
@@ -57,15 +67,16 @@ int main() {
             if (event->is<sf::Event::Closed>())
                 window.close();
 
-            if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && scoreDisplayTimer == 0) {
                 if (event->is<sf::Event::MouseButtonPressed>()) {
                     sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
                     for (size_t i = 0; i < sprites.size(); ++i) {
                         if (sprites[i].getGlobalBounds().contains(mousePos)) {
                             game.playCard(*hand[i]);
-                            lastScore = hand[i]->getLastScore();
+                            lastDiceDetails = hand[i]->getLastDiceDetails();
+                            scoreDisplayTimer = 250;
+                            notedo.combo(0);
                             game.removeCardFromHand(i);
-                            scoreDisplayTimer = 60;
                             lastCard = static_cast<int>(i);
                             break;
                         }
@@ -74,8 +85,11 @@ int main() {
             }
         }
 
-        renderScoreText(window, font, sprites, lastCard, lastScore, scoreDisplayTimer);
-        if (scoreDisplayTimer > 0) --scoreDisplayTimer;
+        if (scoreDisplayTimer>0) {
+            scoreDisplayTimer--;
+            renderDiceRoll(window, font, windowHeight, windowWidth, lastDiceDetails,scoreDisplayTimer, notedo);
+            renderScoreText(window, font, sprites, lastCard, lastDiceDetails, scoreDisplayTimer);
+        }
         if (NextLevelTimer > 0) {
             renderNextLevel(window, font, windowHeight, NextLevelTimer);
             --NextLevelTimer;

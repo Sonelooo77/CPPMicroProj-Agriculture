@@ -1,8 +1,9 @@
 /* renderer.cpp */
-#include "renderer.h"
+#include "Renderer.h"
 #include <iostream>
 #include <sstream>
 #include <map>
+#include "AudioManager.h"
 #include <SFML/Graphics.hpp>
 
 #include "Card.h"
@@ -83,9 +84,16 @@ void renderCards(sf::RenderWindow& window, const std::vector<std::unique_ptr<Car
     }
 }
 
-void renderScoreText(sf::RenderWindow& window, sf::Font& font, const std::vector<sf::Sprite>& sprites, int lastCard, int lastScore, int scoreDisplayTimer) {
+void renderScoreText(sf::RenderWindow& window, sf::Font& font, const std::vector<sf::Sprite>& sprites, int lastCard, const std::vector<int>& diceResults, int scoreDisplayTimer) {
+    int totalFrames = 250;
+    int resultsToShow = (totalFrames - scoreDisplayTimer) / 30 + 1;
+    resultsToShow = std::min(resultsToShow, static_cast<int>(diceResults.size()));
+    int currentScore = 0;
+    for (int i = 0; i < resultsToShow; ++i) {
+        currentScore += diceResults[i];
+    }
     if (scoreDisplayTimer > 0 && lastCard >= 0) {
-        sf::Text cardScoreText = showCardScore(lastScore, font, 4.25f * scoreDisplayTimer);
+        sf::Text cardScoreText = showCardScore(currentScore, font, 125.f);
         cardScoreText.setPosition({sprites[lastCard].getPosition().x, sprites[lastCard].getPosition().y - 60.f});
         window.draw(cardScoreText);
     }
@@ -117,5 +125,28 @@ void renderNextLevel(sf::RenderWindow& window, sf::Font& font, float windowHeigh
         nextLever.setStyle(sf::Text::Bold);
         window.draw(nextLever);
     }
+}
+
+void renderDiceRoll(sf::RenderWindow& window, sf::Font& font, float windowHeight, float windowWidth, const std::vector<int>& diceResults, int diceAnimationTime, AudioManager& audioManager) {
+    if (diceResults.empty()) return;
+    int totalFrames = 250;
+    int resultsToShow = (totalFrames - diceAnimationTime) / 30 + 1;
+    resultsToShow = std::min(resultsToShow, static_cast<int>(diceResults.size()));
+    if ((totalFrames - diceAnimationTime)%29 == 0 && resultsToShow < diceResults.size()) {
+        std::cout << "AudioManager combo called with resultsToShow: " << resultsToShow << std::endl;
+        audioManager.combo(resultsToShow);
+    }
+    sf::Text diceText(font);
+    std::ostringstream oss;
+    oss << "Crop Result: ";
+    for (int i = 0; i < resultsToShow; ++i) {
+        if (i > 0) oss << " ";
+        oss << diceResults[i];
+    }
+    diceText.setString(oss.str());
+    diceText.setCharacterSize(20);
+    diceText.setFillColor(sf::Color::White);
+    diceText.setPosition({windowWidth * 0.15f, windowHeight * 0.5f});
+    window.draw(diceText);
 }
 

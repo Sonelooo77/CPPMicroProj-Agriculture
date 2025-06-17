@@ -9,6 +9,7 @@
 #include <memory>
 #include "Card.h"
 #include "GameManager.h"
+#include "AudioManager.h"
 
 sf::Text showCardScore(const int score, sf::Font& font, int opacity = 255);
 
@@ -32,7 +33,7 @@ void renderScoreText(sf::RenderWindow& window,
                      sf::Font& font,
                      const std::vector<sf::Sprite>& sprites,
                      int lastCard,
-                     int lastScore,
+                     const std::vector<int>& diceResults,
                      int scoreDisplayTimer);
 
 void renderGameOver(sf::RenderWindow& window,
@@ -43,5 +44,13 @@ void renderNextLevel(sf::RenderWindow& window,
                     sf::Font& font,
                     float windowHeight,
                     int NextLevelTimer);
+
+void renderDiceRoll(sf::RenderWindow& window,
+                     sf::Font& font,
+                     float windowHeight,
+                     float windowWidth,
+                     const std::vector<int>& diceResults,
+                     int diceAnimationTime,
+                     AudioManager& audioManager);
 
 #endif //RENDERER_H

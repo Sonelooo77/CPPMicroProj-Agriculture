@@ -8,6 +8,12 @@ Le but du jeu est de gagner le plus de points possible en utilisant des cartes q
 Le hasard de chaque carte ressource représente les aléas de la production d'un agriculteur, tandis que les cartes outils représentent les innovations qui peuvent améliorer la production.
 Le jeu souligne le fait que l'agriculture n'est pas une science exacte, mais plutôt un domaine où le hasard joue un rôle important, où la rémunération des agriculteurs en dépend.
 
+# Comment générer le jeu ?
+- Ouvrez un terminal dans CardProject
+- Tapez cmake --build . --config Release
+- Faites la touche entrée 
+- Si tout va bien, le jeu se lance
+
 # Comment jouer ?
 Le joueur dispose de 5 cartes tirées aléatoirement au début du jeu. À chaque tour, il peut choisir de jouer une carte ressource ou une carte outil. Les cartes ressources sont utilisées pour lancer des dés et accumuler des points, tandis que les cartes outils peuvent être utilisées pour améliorer le score des cartes ressources.
 Lorsqu'une carte est jouée, elle est retirée de la main du joueur et une nouvelle carte est tirée du paquet. Le jeu se termine lorsque le joueur a dépassé le quota de points nécessaire, ou alors lorsqu'il a dépassé le coût maximal.

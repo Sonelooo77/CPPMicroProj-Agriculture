@@ -17,6 +17,7 @@ Le jeu est sous la forme d'un point & click.
 - Utilisation de SFML pour l'affichage et la gestion des inputs.
 - PugiXML est utilisé pour permettre une customisation simple et rapide des cartes et niveaux.
 - Les cartes et les niveaux sont générés dynamiquement à partir de fichiers XML, à l'aide du Design Pattern Factory.
+- Les états du jeu (en cours, victoire et défaite) sont gérés par un State Design Pattern (State Machine simple).
 - La pioche est un vecteur de nom de cartes, et les cartes sont créées dynamiquement à partir de ces noms, permettant de ne pas avoir à créer un grand nombre de carte pour créer la pioche.
 - La classe Card est abstraite, facilitant l'implémentation et l'ajout de différent types de cartes (Resource, tool, etc..)
 

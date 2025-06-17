@@ -44,7 +44,7 @@ void renderInfo(sf::RenderWindow& window, sf::Font& font, GameManager& game) {
            << "Farm power: " << game.getCurrentScore() << "/" << game.getTargetScore() << "\n"
            << "Cost: " << game.getCurrentCost() << "/" << game.getCurrentMaxCost();
     info.setString(stream.str());
-    info.setPosition({windowWidth * 0.05f, windowHeight * 0.05f});
+    info.setPosition({windowWidth * 0.025f, windowHeight * 0.025f});
     window.draw(info);
 }
 
@@ -120,7 +120,6 @@ void renderNextLevel(sf::RenderWindow& window, sf::Font& font, float windowHeigh
         if (NextLevelTimer%15 == 0) nextLever.setFillColor(sf::Color(255, 255, 255, 0));
         else nextLever.setFillColor(sf::Color(255, 255, 255, 255));
         sf::FloatRect textRect = nextLever.getLocalBounds();
-        // nextLever.setOrigin({textRect.position.x + textRect.size.x / 2.0f, textRect.position.y + textRect.size.y / 2.0f});
         nextLever.setPosition({windowHeight * 0.35f, windowHeight * 0.3f});
         nextLever.setStyle(sf::Text::Bold);
         window.draw(nextLever);

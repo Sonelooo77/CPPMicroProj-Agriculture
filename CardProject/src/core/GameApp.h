@@ -26,14 +26,14 @@ private:
     sf::RenderWindow window;
     sf::Font font;
     sf::Texture backgroundTexture;
-    sf::Sprite backgroundSprite;
     std::map<std::string, sf::Texture> textureMap;
     std::vector<sf::Sprite> sprites;
     int lastCard = -1;
     int lastScore = 0;
     int scoreDisplayTimer = 0;
     int nextLevelTimer = 0;
-    int diceAnimationTime = 0;
+    bool gameOver = false;
+
     std::vector<int> lastDiceDetails;
 
     CardFactory cardFactory;

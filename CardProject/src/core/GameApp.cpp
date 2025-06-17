@@ -8,13 +8,10 @@
 #include "GameManager.h"
 
 
-GameApp::GameApp() :
-        window(sf::VideoMode({1000, 800}), "Jeu de Cartes"),
-        cardFactory("resources/cardsdefinition.xml"),
-        levelFactory("resources/levelsdefinition.xml"),
-        backgroundSprite(backgroundTexture)
+GameApp::GameApp() : window(sf::VideoMode({1000, 800}), "Jeu de Cartes"),
+                     cardFactory("resources/cardsdefinition.xml"),
+                     levelFactory("resources/levelsdefinition.xml")
 {
-
     window.setFramerateLimit(60);
     window.setKeyRepeatEnabled(false);
 
@@ -25,7 +22,8 @@ GameApp::GameApp() :
     if (!backgroundTexture.loadFromFile("resources/assets/background.png")) {
         std::cerr << "Erreur lors du chargement du Background" << std::endl;
     }
-    backgroundSprite.setTexture(backgroundTexture);
+
+
 
     loadTextures(cardFactory.getAvailableCards(), textureMap);
 
@@ -39,7 +37,6 @@ void GameApp::run() {
         processEvents();
         update();
         render();
-        std::cout<<"test ?"<<std::endl;
     }
 }
 
@@ -86,6 +83,7 @@ void GameApp::update() {
             window.close();
         }
     } else if (game.isGameLost()) {
+        gameOver = true;
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::R)) {
         game.restart();
@@ -95,27 +93,32 @@ void GameApp::update() {
 
 void GameApp::render() {
     window.clear();
+    sf::Sprite backgroundSprite(backgroundTexture);
     window.draw(backgroundSprite);
-
-    renderInfo(window, font, game);
-    renderRetryText(window, font);
-
-    const auto& hand = game.getPlayerHand();
-    sf::Vector2u windowSize = window.getSize();
-    auto windowWidth = static_cast<float>(windowSize.x);
-    auto windowHeight = static_cast<float>(windowSize.y);
-    renderCards(window, hand, textureMap, sprites, windowWidth, windowHeight);
-
-    if (scoreDisplayTimer > 0) {
-        renderDiceRoll(window, font, windowHeight, windowWidth, lastDiceDetails, scoreDisplayTimer, note);
-        renderScoreText(window, font, sprites, lastCard, lastDiceDetails, scoreDisplayTimer);
+    if (gameOver) {
+        renderGameOver(window, font, window.getSize().y);
     }
-    if (nextLevelTimer > 0) {
-        renderNextLevel(window, font, windowHeight, nextLevelTimer);
-    }
-    if (game.isGameLost()) {
-        renderGameOver(window, font, windowHeight);
-    }
+    else {
+        renderInfo(window, font, game);
+        renderRetryText(window, font);
 
+        const auto& hand = game.getPlayerHand();
+        sf::Vector2u windowSize = window.getSize();
+        auto windowWidth = static_cast<float>(windowSize.x);
+        auto windowHeight = static_cast<float>(windowSize.y);
+        renderCards(window, hand, textureMap, sprites, windowWidth, windowHeight);
+
+        if (scoreDisplayTimer > 0) {
+            renderDiceRoll(window, font, windowHeight, windowWidth, lastDiceDetails, scoreDisplayTimer, note);
+            renderScoreText(window, font, sprites, lastCard, lastDiceDetails, scoreDisplayTimer);
+        }
+        if (nextLevelTimer > 0) {
+            renderNextLevel(window, font, windowHeight, nextLevelTimer);
+        }
+        if (game.isGameLost()) {
+            renderGameOver(window, font, windowHeight);
+        }
+    }
     window.display();
 }
+

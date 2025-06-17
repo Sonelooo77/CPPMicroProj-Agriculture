@@ -59,7 +59,10 @@ std::unique_ptr<Card> CardFactory::createCard(const std::string& cardName) {
   if (data.type == "resource") {
     return std::make_unique<ResourceCard>(data.name, data.cost, data.cardDiceSet);
   }
-
+  else {
+    throw std::runtime_error("Tool Card not implemented");
+  }
+  return nullptr;
 }
 
 void CardFactory::dump() {

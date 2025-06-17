@@ -10,6 +10,8 @@ Le jeu souligne le fait que l'agriculture n'est pas une science exacte, mais plu
 
 # Comment générer le jeu ?
 - Ouvrez un terminal dans CardProject
+- Tapez cmake .
+- Faites la touche entrée
 - Tapez cmake --build . --config Release
 - Faites la touche entrée 
 - Si tout va bien, le jeu se lance

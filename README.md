@@ -20,6 +20,10 @@ Le jeu est sous la forme d'un point & click.
 - La pioche est un vecteur de nom de cartes, et les cartes sont créées dynamiquement à partir de ces noms, permettant de ne pas avoir à créer un grand nombre de carte pour créer la pioche.
 - La classe Card est abstraite, facilitant l'implémentation et l'ajout de différent types de cartes (Resource, tool, etc..)
 
+# Screenshot
+![screen](https://github.com/user-attachments/assets/bb15a6a5-02c6-42c2-b09d-cf335c68d752)
+
+
 # Diagramme de classe
-[diagramme_classe](https://github.com/user-attachments/assets/0783c5a2-715a-43f9-a818-2aa9f833dec4)
+![diagramme_classe](https://github.com/user-attachments/assets/0783c5a2-715a-43f9-a818-2aa9f833dec4)
 
